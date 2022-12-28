@@ -1,0 +1,53 @@
+/* _animaions.scss */
+
+.underline {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        width: 0;
+        bottom: 0.9rem;
+        background: $orange;
+        height: 0.3rem;
+        transition-property: width;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+    }
+    &:hover:after, 
+    &:focus:after, 
+    &:active:after {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+
+
+@keyframes slide-left {
+    from { left: -102.1%; }
+    to   { left: 0; }
+}
+@keyframes slide-right {
+    from { left: -102.1%; }
+    to   { left: -204.2%; }
+}
+
+@include _1000 {
+    @keyframes slide-left {
+        from { left: -99.4%; }
+        to   { left: 0.8%; }
+    }
+    @keyframes slide-right {
+        from { left: -99.4%; }
+        to   { left: -199.6%; }
+    }
+}
+
+
+.slide-left  { animation-name: slide-left; }
+.slide-right { animation-name: slide-right; }

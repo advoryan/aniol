@@ -1,0 +1,299 @@
+/* _pets.scss */
+
+.pets {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    color: $black;
+    padding-bottom: 10rem;
+    @include _1000 {
+        padding-bottom: 14rem;
+    }
+    @include _640 {
+        padding-bottom: 10rem;
+    }
+    @include _320 {
+        padding-bottom: 6rem;
+    }
+    & .slider {
+        width: 100%;
+    }
+    &__palm {
+        position: absolute;
+        top: 215rem;
+        left: -58.85rem;
+        @include _1000 {
+            top: 212.6rem;
+            left: -19.2rem;
+            & img {
+                height: 20.2rem;
+            }
+        }
+        @include _640 {
+            top: 165rem;
+            left: -25.2rem;
+            & img {
+                height: 20.1rem;
+            }
+        }
+        @include _320 {
+            top: 220.3rem;
+            left: -7.95rem;
+            & img {
+                height: 7.2rem;
+            }
+        }
+    }
+    &__strelitzia {
+        position: absolute;
+        top: 233.55rem;
+        right: 0;
+        @include _1000 {
+            top: 214.8rem;
+            & img {
+                height: 18.0rem;
+            }
+        }
+        @include _640 {
+            top: 172rem;
+            & img {
+                height: 13.1rem;
+            }
+        }
+        @include _320 {
+            top: 220.7rem;
+            right: -2rem;
+            & img {
+                height: 7.1rem;
+            }
+        }
+    }
+    &__button {
+        margin-top: 0.2rem;
+        @include _1000 {
+            margin-top: 0.3rem;
+        }
+        @include _640 {
+            margin-top: -2rem;
+        }
+        @include _320 {
+            margin-top: -6rem;
+        }
+    }
+}
+
+.slider {
+    position: relative;
+    &__inner-wrapper {
+        position: relative;
+        min-height: 90rem;
+        max-height: 90rem;
+        overflow: hidden;
+        @include _320 {
+            overflow:visible ;
+            min-height: 145rem;
+        }
+    }
+    &__long-container {
+        animation-duration: 1.2s;
+        animation-fill-mode: forwards;
+        max-height: 90rem;
+        position: absolute;
+        z-index: 2;
+        top: 0;    
+        left: 0;     
+        left: -102.1%;
+        
+        display: flex;
+        flex-direction: row;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 2.3rem;
+        column-gap: 2.9rem;
+        @include _1000 {
+            left: -99.4%; 
+            row-gap: 9.3rem;
+            column-gap: 2rem;
+        }
+        @include _640 {
+            row-gap: 9.2rem;
+            column-gap: 1.6rem;
+        }
+        @include _320 {
+            left: 0;
+            padding-left: 0.5rem;
+            row-gap: 3rem;
+            max-height: fit-content;
+            
+        }
+    }
+}
+
+.card {
+    display: flex;
+    width: 36.6rem;
+    flex-direction: column;
+    border: 1px solid $orange;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    @include _1000 {
+        width: 29.4rem;        
+    }
+    @include _640 {
+        width: 28.5rem;
+    }
+    &__shadow {
+        transition: 0.2s ease-in-out;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        visibility: hidden;
+    }
+    &__description {
+        position: absolute;
+        z-index: 10;
+        padding: 2rem;
+        top: 100%;
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    &__img {
+        transition: 0.2s ease-in-out;
+        width: 100%;
+        @include _640 {
+            height: 28.5rem;
+        }
+    }
+    &__img-container {
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
+        transition: 0.2s ease-in-out;
+        &:hover .card__shadow {
+            transition: 0.2s ease-in-out;
+            visibility: visible;
+            background:  rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 8rem 3rem rgba(0, 0, 0, 0.8) inset;
+            -moz-box-shadow: 0 0 8rem 3rem rgba(0, 0, 0, 0.8) inset;
+            box-shadow: 0 0 8rem 3rem rgba(0, 0, 0, 0.8) inset;
+        }
+        &:hover .card__img {
+            transition: 0.5s ease-in-out;
+            transform: scale(1.2);
+        }
+        &:hover .card__description {
+            transition: 0.5s ease-in-out;
+            top: 7rem;
+        }
+    }
+    &__footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.9rem 1.2rem 1.1rem 1.5rem;
+        @include _640 {
+            padding: 0.33rem 1.2rem 0.4rem 1.11rem;
+        }
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+    }
+    &__pet-name {
+        font-size: 1.6rem;
+        line-height: 2.24rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        @include _640 {
+            font-size: 1.247rem;
+            line-height: 140%;
+        }
+    }
+    &__living-area {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+        @include _640 {
+            font-size: 1.169rem;
+            line-height: 135%;
+        }
+    }
+    &__icon {
+        @include _640 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: -0.5rem;
+            margin-bottom: 0;
+            height: 85%;
+            width: 6rem;
+        }
+    }
+    &__photo {
+        @include _640 {
+            height: 90%;
+        }
+    }
+}
+
+.arrow {
+    &__absolute-pos {
+        position: absolute;
+        top: 46.2%;
+        z-index: 12;
+        @include _640 {
+            top: 45.3%;
+        }
+        &.arrow__left {
+            left: -8.2rem;
+            // left: -100rem;
+            @include _1000 {
+                top: 41%;
+                left: 34.4%;
+            }
+            @include _640 {
+                top: 38.5%;
+                left: 37.2%;
+            }
+            @include _320 {
+                display: none;
+            }
+        }
+        &.arrow__right {
+            right: -8.2rem;
+            @include _1000 {
+                top: 41%;
+                right: 34.3%;
+            }
+            @include _640 {
+                top: 38.5%;
+                right: 37.2%;
+            }
+            @include _320 {
+                display: none;
+            }
+        }
+    }
+}
+
+// .hide-on-1000w {
+//     display: none;
+//     @include _1000 {
+//         display: flex;
+//     }
+// }
+// .show-on-1000w {
+//     display: flex;
+//     @include _1000 {
+//         display: none;
+//     }
+// }
