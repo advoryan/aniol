@@ -1,2 +1,2 @@
 # aniol
-Drowing talent discovery group
+Drawing talent discovery group
