@@ -1,0 +1,142 @@
+/* _reset.scss */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+  font-size: 10px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: black;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* _variables.scss */ /* _typography.scss */
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  padding: 0 3rem;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+.wrapper__container {
+  background-color: white;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* _header.scss */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.header__slogan {
+  flex: 0 0 100%;
+  margin: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 15rem;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+}
+
+/* _carousel.scss */
+.carousel {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.carousel__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.carousel__item {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid grey;
+  min-height: 10rem;
+}
+
+/*# sourceMappingURL=style.css.map */

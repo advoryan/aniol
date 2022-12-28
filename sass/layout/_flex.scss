@@ -1,0 +1,32 @@
+// /* _flex.scss */
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    padding: 0 3rem;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.37);
+    &__container {
+        background-color: white;
+        width: 100%;
+        max-width: $desktopGuideWidth + px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    // &__guide {
+    //     width: $desktopGuideWidth + px;
+    //     display: flex;
+    //     flex-direction: column;
+    //     margin: 0 auto;
+    //     @include _1000 {
+    //         width: calc(#{$smalldesktop + px} - 60px);
+    //     }
+    //     @include _640 {
+    //         width: calc(#{$smalldesktop_min + px} - 40px);
+    //     }
+    //     @include _320 {
+    //         width: calc(#{$tablet + px} - 1rem);
+    //     }
+    // }
+}
+

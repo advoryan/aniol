@@ -1,0 +1,68 @@
+/* _variables.scss */
+$main-font: 'Roboto', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-semi-light: 400;
+$font-weight-medium: 500;
+$font-weight-large: 700;
+
+$brPoint-1000: 1599;
+$brPoint-640: 999;
+$brPoint-320: 639;
+
+$desktopGuideWidth: 1160;
+$smalldesktop: 1000;
+
+$desktopMaxWidth: 1599;
+$smalldesktop_min: 640;
+$tablet: 320;
+
+@mixin _1000 {
+    @media (max-width: $brPoint-1000 + px) {
+        @content;
+    }
+}
+@mixin _640 {
+    @media (max-width: $brPoint-640 + px) {
+        @content;
+    }
+}
+@mixin _320 {
+    @media (max-width: $brPoint-320 + px) {
+        @content;
+    }
+}
+// @mixin _1000 {
+//     @media (max-width: $desktopMaxWidth + px) {
+//         @content;
+//     }
+// }
+// @mixin _640 {
+//     @media (max-width: $smalldesktop_min + px) {
+//         @content;
+//     }
+// }
+// @mixin _320 {
+//     @media (max-width: $tablet + px) {
+//         @content;
+//     }
+// }
+
+
+$white:           #FFFFFF;
+$fosted-white:    #FDFDFF;
+$red:             #D31414;
+$orange:          #F9804B;
+$orange-transp:   #F9804B60;
+$orange-end-grad: #FE9013;
+$dark-orange:     #E47209;
+$green:           #4B9200;
+$black:           #000000;
+$black_blue:      #333B41;
+$gray:            #767474;
+$gray-smokie:     #ABABAB;           
+$gray4:           #BDBDBD;
+$gray-light:      #F1F3F2;           
+$yellow:          #FFEE2E;
+$footer-bg:       #c4c4c480;
+$gray-for-form:   #929699;

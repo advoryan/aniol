@@ -1,0 +1,136 @@
+.backstage {
+    color: $gray;
+    width: 100%;
+    margin-bottom: 8.22rem;
+    @include _640 {
+        margin-bottom: 7rem;
+    }
+    @include _320 {
+        margin-bottom: 4rem;
+    }
+    &__container {
+        padding: 14rem 0 9.3rem 0;
+        display: flex;
+        gap: 7.4%;
+        @include _1000 {
+            padding: 10rem 0 5rem 0;
+            gap: 3.1rem;
+        }
+        @include _640 {
+            padding: 6rem 10.5rem 0 0;
+            flex-direction: column-reverse;
+        }
+        @include _320 {
+            margin-left: 0.7rem;
+            padding: 7.1rem 1rem 0 0rem;
+            flex-direction: column-reverse;
+        }
+    }
+    &__img {
+        @include _1000 {
+            overflow: hidden;
+            flex: 0 1 50%;
+            & img {
+                padding-top: 0.92rem;
+                margin-left: -8rem;
+                height: 41.77rem;
+                width: 61.55rem;
+            }
+        }
+        @include _640 {
+            display: none;
+        }
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2.1rem;
+        font-weight: 400;
+        @include _1000 {
+            flex: 0 1 50%;
+            padding-bottom: 1.1rem;
+        }
+        @include _320 {
+            padding-bottom: 0;
+        }
+        &_large {
+            font-size: 4.8rem;
+            line-height: 5.76rem;
+            @include _1000 { line-height: 5.79rem; }
+            @include _640 { padding-left: 0.4rem; }
+            @include _320 {
+                margin-left: -0.6rem;
+                font-size: 2.4rem;
+                line-height: 120%;
+                padding-right: 6rem;
+            }
+        }
+        &_tiny {
+            font-size: 1.6rem;
+            line-height: 2.08rem;
+            @include _1000 {
+                line-height: 2rem;
+            }
+            @include _320 {
+                font-size: 1.6rem;
+                line-height: 131%;
+                margin-top: -1.1rem;
+                padding-right: 0rem;
+            }
+        }
+        &_medium {
+            padding-top: 2.5rem;
+            font-size: 2.4rem;
+            line-height: 5rem;
+            @include _1000 {
+                padding-top: 2.2rem;
+                line-height: 5.4rem;
+            }
+            @include _640 {
+                padding-left: 0.4rem;
+                padding-top: 0;
+                margin-bottom: -1.7rem;
+            }
+            @include _320 {
+                margin-top: -1.35rem;
+                margin-left: -0.4rem;
+                margin-bottom: -2.7rem;
+            }
+        }
+        &_small {
+            font-size: 1.6rem;
+            line-height: 2.24rem;
+            @include _1000 {
+                padding-right: 1rem;
+                line-height: 2.2rem;
+            }
+            @include _320 {
+                margin-top: 0.3rem;
+                margin-left: -0.2rem;
+                padding-right: 0rem;
+                line-height: 138%;
+            }
+        }
+    }
+    &__flowers {
+        position: absolute;
+        top: 79.2rem;
+        right: 0;
+        @include _1000 {
+            display: none;
+        }
+        @include _640 {
+            display: flex;
+            top: 36.95rem;
+            height: 47.9rem;
+            right: -2.8rem;
+        }
+        @include _320 {
+            display: flex;
+            top: 26rem;
+            height: 21.7rem;
+            right: -4rem;
+        }
+    }
+}

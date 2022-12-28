@@ -1,0 +1,230 @@
+/* _testimonials.scss */
+
+.testimonials {
+    width: 100%;
+    padding: 14rem 0 17.9rem 0;
+    color: $black_blue;
+    @include _1000 {
+        padding: 10.1rem 0 14rem 0;
+    }
+    @include _640 {
+        padding: 6.15rem 0.4rem 8rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include _320 {
+        padding: 3rem 0.4rem 6rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__header {
+        font-weight: 400;
+        font-size: 3.6rem;
+        line-height: 4.68rem;
+        margin-bottom: 4.7rem;
+        text-align: center;
+        @include _1000 {
+            margin-bottom: 3rem;
+        }
+        @include _320 {
+            margin-bottom: 2rem;
+            font-size: 2.3rem;
+            line-height: 120%;
+        }
+    }
+    &__wrapper {
+        width: 100%;
+        // position: relative;
+        overflow: hidden;
+        @include _640 {
+            max-height: 40rem;
+        }
+        @include _320 {
+            max-height: 39rem;
+        }
+    }
+    &__container {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        gap: 2.2rem;
+        position: relative;
+        left: 0;
+        transition: 2s ease-in-out;
+        animation-duration: 2s;
+        @include _1000 {
+            gap: 1.93rem;
+        }
+        @include _640 {
+            padding: 2rem;
+            flex-direction: column;
+            gap: 0;
+            width: 42rem;
+            min-height: 40rem;    
+        }
+        @include _320 {
+            flex-direction: column;
+            gap: 0;
+            width: 11rem;
+            height: 37.6rem;    
+        }
+    }
+    &__button {
+        width: 34rem;
+        @include _640 {
+            padding-top: 2rem;
+            margin-left: 10.4rem;
+        }
+        @include _320 {
+            padding-top: 1rem;
+            margin-left: 9.9rem;
+        }
+    }
+    &__leave {
+        position: absolute;
+        top: 425.7rem;
+        right: 0;
+        @include _1000 {
+            top: 381rem;            
+            & img {
+                height: 32rem;
+            }
+        }
+        @include _640 {
+            top: 316.5rem;
+            right: -0.6rem;
+            & img {
+                height: 20.2rem;
+            }
+        }
+        @include _320 {
+            top: 387.3rem;
+            right: -0.5rem;
+            transform: rotate(-11deg);
+            & img {
+                height: 10rem;
+            }
+        }
+    }
+    &__scroll {
+        @include _640 {
+            display: none;
+        }
+    }
+    &__progress {
+        margin-bottom: 3rem;
+    }
+}
+
+.t-card {
+    padding: 1.5rem 1.55rem 1.9rem 1.55rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+    min-width: 26.8rem;
+    height: 39.1rem;
+    color: $black;
+    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    border-radius: 1.8rem;
+    transition: 0.2s ease-out;
+    z-index: 0;
+    margin-bottom: 2.1rem;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 26.4rem;
+        height: 38.7rem;
+        top: 0.2rem;
+        left: 0.2rem;
+        background: $gray-light;
+        z-index: -1;
+        border-radius: 1.7rem;
+        transition: 0.2s ease-out;
+    }
+    &:hover, &:focus {
+        transition: 0.2s ease-out;
+        transform: scale(1.04);
+        background-color: $gray-light;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 5px 32px 16px;
+        cursor: pointer;
+    }
+    @include _1000 {
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+        min-width: 29.4rem;
+        &::before {
+            min-width: 29rem;
+        }
+    }
+    @include _640 {
+        overflow: hidden;
+        padding: 1.2rem 2.6rem 0.7rem 1.55rem;
+        width: 56.4rem;
+        height: 10.9rem;
+        &::before {
+            overflow: hidden;
+            width: 56rem;
+            height: 10.5rem;
+        }
+    }
+    @include _320 {
+        padding: 1.1rem 2.6rem 1.2rem 1.28rem;
+        min-width: 26.4rem;
+        max-width: 26.4rem;
+        min-height: 10.9rem;
+        gap: 0.9rem;
+        margin-bottom: 1.5rem;
+        &::before {
+            min-width: 26rem;
+            max-width: 26rem;
+            height: 10.5rem;
+        }
+    }
+    &__header {
+        display: flex;
+        gap: 1rem;
+        @include _640 {
+            gap: 0.6rem;
+        }
+    }
+    &__header-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 0.2rem;
+        column-gap: 0.7rem;
+        align-items: center;
+    }
+    &__name {
+        flex: 0 1 100%;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.92rem;
+        color: $black;
+    }
+    &__origin, 
+    &__date,
+    &__feedback {
+        text-align: left;
+        font-weight: 300;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: $gray4;
+    }
+    &__feedback {
+        color: $gray;
+        overflow: hidden;
+        @include _320 {
+            padding-left: 0.5rem;
+        }
+    }
+    &__dot {
+        border: 0.15rem solid $gray4;
+        width: 0.15rem;
+        height: 0.15rem;
+        background-color: $gray4;
+        border-radius: 50%;
+    }
+}

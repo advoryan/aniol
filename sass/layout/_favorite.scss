@@ -1,0 +1,161 @@
+/* _favorite.scss */
+
+.watch {
+    min-height: 38.6rem;
+    padding-top: 9.2rem;
+    background-image: url(../../assets/images/favorite/Giant_Panda.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include _1000 {
+        padding-top: 6.8rem;
+    }
+    @include _640 {
+        padding-top: 2.6rem;
+        min-height: 37.3rem;
+    }
+    @include _320 {
+        padding-top: 10.5rem;
+        background-size: 120%;
+        min-height: 25.5rem;
+    }
+    &_donate {
+        margin-top: 8rem;
+        @include _1000 {
+            min-height: 39rem;
+            background-size: 160%;
+            background-position: 29%;
+        }
+        @include _640 {
+            margin-top: 3.4rem;
+            min-height: 33.5rem;
+            background-size: 213%;
+            background-position: 37%;
+        }
+        @include _320 {
+            padding-top: 10.5rem;
+            background-size: 240%;
+            min-height: 18.7rem;
+            background-position: 33.45%;
+        }
+    }
+    &__guide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: $desktopGuideWidth + px;
+        margin: 0 auto;
+        @include _1000 {
+            width: $smalldesktop + px;
+        }
+        @include _640 {
+            width: $smalldesktop_min + px;
+        }
+        @include _320 {
+            width: $tablet + px;
+        }
+    }
+    &__container {
+        display: flex;
+        position: relative;
+        max-width: 57.3rem;
+        width: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include _1000 {
+            max-width: 47.3rem;
+        }
+        @include _640 {
+            max-width: 30rem;
+        }
+        @include _320 {
+            max-width: 20rem;
+        }
+    }
+    &__text {
+        padding-top: 7.5rem;
+        padding-left: 7.45rem;
+        margin-bottom: 6rem;
+        position: relative;
+        display: inline-flex;
+        height: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        font-size: 10.65rem;
+        line-height: 0.75;
+        font-weight: 700;
+        text-transform: uppercase;
+        z-index: 1;
+        @include _1000 {
+            padding-top: 5.5rem;
+            padding-right: 17.4rem;
+            font-size: 8.52rem;
+            line-height: 6.375rem;
+            margin-bottom: 4.1rem;
+        }
+        @include _640 {
+            padding-top: 5.6rem;
+            padding-right: 6.3rem;
+            font-size: 5.429rem;
+            line-height: 75%;
+            margin-bottom: -0.65rem;
+        }
+        @include _320 {
+            padding-top: 0rem;
+            margin-top: -3rem;            
+            padding-right: 2.3rem;
+            font-size: 2.8rem;
+            margin-bottom: -0.65rem;
+        }
+        &_yellow {
+            color: $yellow;
+        }
+    }
+    &__orange-circle {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        height: 46.6rem;
+        width: 46.6rem;
+        background-color: $orange;
+        border-radius: 50%;
+        @include _1000 {
+            top: 0.1rem;
+            left: -7.15rem;
+            height: 36.7rem;
+            width: 36.7rem;
+        }
+        @include _640 {
+            top: 1.82rem;
+            left: -0.9rem;
+            height: 23.76rem;
+            width: 23.76rem;
+        }
+        @include _320 {
+            top: -4.92rem;
+            left: 4.3rem;
+            height: 11.909rem;
+            width: 11.909rem;
+        }
+    }
+    &__link {
+        margin-bottom: 10rem;
+        margin-left: 7.6rem;
+        @include _1000 {
+            margin-left: -10rem;
+            margin-bottom: 4.75rem;
+        }
+        @include _640 {
+            margin-left: -64.1rem;
+            margin-bottom: 2.75rem;
+        }
+        @include _320 {
+            position: absolute;
+            top: 13.6rem;
+            right: 1.1rem;
+        }
+    }
+}

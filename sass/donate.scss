@@ -1,0 +1,26 @@
+@charset 'utf-8';
+
+@import 'base/reset';
+@import 'abstracts/variables';
+
+@import 'base/typography';
+@import 'components/scroll';
+@import 'components/ruler';
+// @import 'base/animations';
+
+@import 'layout/flex';
+@import 'layout/header';   
+@import 'layout/favorite';
+// @import 'layout/backstage';
+// @import 'layout/pets';
+@import 'layout/pick-and-feed';
+// @import 'layout/testimonials';
+@import 'layout/footer';
+
+// @import 'layout/navigation';
+
+@import 'components/buttons';
+// @import 'components/carousel';
+
+// @import 'themes/theme';
+
